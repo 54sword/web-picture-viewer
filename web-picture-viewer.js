@@ -682,11 +682,13 @@ var WebPictureViewer = (function () {
 	//========================================================================
 
 	// pc 模式
-	box.prototype.pc = function(images) {
+	box.prototype.pc = function(images, index) {
 
 		if (typeof images === 'string') {
 			images = [images];
 		}
+
+		this.currentImgIndex = index;
 
 		setCSS(this.body, { 'overflow':'hidden' });
 		setCSS(this.html, { 'overflow':'hidden' });
